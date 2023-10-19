@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +13,10 @@
 <body>
     <h1>Formatação com String</h1>
     <script>
-        var num = 19.5
-        document.write(`A variável num: ${num.toFixed(2).replace('.', ',')}<br>`)
-        document.write(`${num.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}<br>`)
-        var nome = 'Elson Santos do Nascimento'
-        document.write(`Maiúsculas: ${nome.toUpperCase()}<br>`)
-        document.write(`menúsculas: ${nome.toLowerCase()}`)
+        let nome = window.prompt('Qual é seu nome? ')
+        document.write(`Olá, <strong><em>${nome}</em></strong>! Seunume tem ${nome.length} letras<br>`)
+        document.write(`Seu nome em maiúculas ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em menúsculas ${nome.toLowerCase()}<br>`)
     </script>
 </body>
 </html>
