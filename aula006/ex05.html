@@ -10,18 +10,33 @@
             color: white;
             font: normal, 18pt, Arial, sans-serif;
         }
+        div#msg {
+            height: 100px;
+            width: 100px;
+            font-size: 2rem;
+            text-align: center;
+            line-height: 100px;
+        }
     </style>
 </head>
 <body>
     <h1>Iniciando estudo com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar <strong>DOM</strong> JavaScript</p>
-    <div>Clique em mim.</div>
+    <div id="msg">Clique em mim.</div>
     <script>
-        var corpo = window.document.body 
-        var p1 = window.document.getElementsByTagName('p')[1]
-        window.document.write(p1.innerHTML)
-        p1.style.color = 'blue'
+        let p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write(`Está escrito assim:` + p1.innerText)
+        p1.style.background = 'blue'
+
+        // let d = window.document.getElementById('msg')
+        // d.style.background = 'gray'
+        // d.innerText = 'Estou aguardando...'
+        // window.document.getElementsByName('msg')[0].innerText = 'teste'
+        // window.document.getElementsByClassName('msg')[0].innerHTML = 'Elson'
+        let t = window.document.querySelector('div#msg')
+        t.style.background = 'red'
+        t.innerText = 'teste'
     </script>
 </body>
 </html>
