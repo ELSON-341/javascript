@@ -22,11 +22,14 @@
     </style>
 </head>
 <body>
-    <section id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">
+    <section id="area">
         Interaja...
     </section>
     <script>
         var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        addEventListener('mouseout', sair)
         function clicar() {
             a.innerText = 'Clicou!'
             a.style.background = 'red'
@@ -34,7 +37,7 @@
         function entrar() {
             a.innerText = 'Entrou!'
         }
-        function saiu() {
+        function sair() {
             a.innerText = 'Saíu!'
             a.style.background = 'lightgreen'
         }
