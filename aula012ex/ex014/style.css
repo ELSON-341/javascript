@@ -10,7 +10,7 @@ html, body {
     box-sizing: border-box;
 }
 body {
-    background-color: rgb(70, 142, 236);
+    background-color: #68a5f3;
 }
 header > h1{
     margin-bottom: 16px;
@@ -27,8 +27,17 @@ section {
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.075);
 }
+div#foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div#foto > img {
+    width: 300px;
+}
 footer {
     color: white;
     text-align: center;
     margin: 16px 0px;
+    font-style: italic;
 }
