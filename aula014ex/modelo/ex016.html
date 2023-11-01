@@ -8,14 +8,23 @@
 </head>
 <body>
     <header>
-        <h1>Hora do dia</h1>
+        <h1>Vamos contar</h1>
     </header>
     <section>
         <div>
-            mostra hora...
+                <label for="txt_inicio">Início:</label>
+                <input type="number" name="txt_inicio" id="txt_inicio" step="0.1" required min="0" max="10"><br>
+
+                <label for="txt_fim">Fim:</label>
+                <input type="number" name="txt_fim" id="txt_fim" step="0.1" required min="0" max="10"><br>
+
+                <label for="txt_passo">Passo:</label>
+                <input type="number" name="txt_passo" id="txt_passo" required min="0" max="5" step="0.1">
+                <button type="button" id="botao">contar</button>
         </div>
-        <div>
-            <img src="" alt="">
+        <hr>
+        <div id="res">
+            Preparando a contagem...
         </div>
     </section>
     <footer>
