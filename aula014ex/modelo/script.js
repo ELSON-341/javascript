@@ -11,7 +11,7 @@ function contador() {
         let f = Number(fim.value)
         let p = Number(pas.value)
         for(let c = i; c <= f; c += p) {
-            res.innerHTML = p
+            res.innerHTML += `${c} `
         }
     }
 }
