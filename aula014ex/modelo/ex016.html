@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Modelo de Execício</title>
+    <title>Super Contagem</title>
 </head>
 <body>
     <header>
-        <h1>Vamos contar</h1>
+        <h1>Vamos Contar</h1>
     </header>
     <section>
         <div>
-                <label for="txt_inicio">Início:</label>
-                <input type="number" name="txt_inicio" id="txt_inicio" step="0.1" required min="0" max="10"><br>
+                <label for="txt_ini">Início:</label>
+                <input type="number" name="txt_ini" id="txt_ini" step="0.1" required min="0" max="10"><br>
 
                 <label for="txt_fim">Fim:</label>
                 <input type="number" name="txt_fim" id="txt_fim" step="0.1" required min="0" max="10"><br>
 
-                <label for="txt_passo">Passo:</label>
-                <input type="number" name="txt_passo" id="txt_passo" required min="0" max="5" step="0.1">
-                <button type="button" id="botao">contar</button>
+                <label for="txt_pas">Passo:</label>
+                <input type="number" name="txt_pas" id="txt_pas" required min="0" max="5" step="0.1">
+                <button type="button" id="botao" onclick="contador()">contar</button>
         </div>
         <hr>
         <div id="res">
