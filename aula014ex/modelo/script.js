@@ -14,10 +14,8 @@ function contagem() {
         window.alert('Passo inválido! Considerando PASSO 1.')
     } else {
         res.innerHTML = 'Contando:<br>'
-        var p = tinicio
-        while(p <= tfim) {
-            res.innerHTML = `${p}`
-            p + tpasso
+        for(var p = tinicio.value; p.value <= tfim.value; p.value += tpasso.value ) {
+            res.innerHTML = p.value
         }
     }   
 }
