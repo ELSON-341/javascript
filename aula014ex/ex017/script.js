@@ -1,17 +1,17 @@
 function tabuada() {
-    let tnum = window.document.getElementById('txtnum')
-    let res = window.document.getElementById('res')
+    let tnum = window.document.querySelector('input#txtnum')
+    let res = window.document.querySelector('select#res')
     if(tnum.value.length == 0) {
         window.alert('Por favor digite um número!')
-    }
-    else {
-        res.innerHTML = ''
+    } else {
         let num = Number(tnum.value)
-        for(let c = 1; c <= 10; c++) {
+        let c = 1
+        while(c <= 10) {
             let item = window.document.createElement('option')
-            item.value = `res${c}`
             item.text = `${num} X ${c} = ${num * c}`
+            res.value = `${c}`
             res.appendChild(item)
+            c++
+        }
         }
     }
-}
