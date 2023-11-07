@@ -27,6 +27,9 @@ section {
     margin: auto;
     padding: 10px;
 }
+select {
+    width: 9em;
+}
 footer {
     text-align: center;
     color: white;
