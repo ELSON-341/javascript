@@ -6,10 +6,10 @@ if(n == -1) {
 } else {
     console.log(`O varlor ${num[n]} estár no posição ${n}`)
 }
-// for(let c = 0; c < num.length; c++) {
-//     console.log(c)
-// }
-
-for(let c in num) {
-    console.log(num[c])
+for(let c = 0; c < num.length; c++) {
+    console.log(c[])
 }
+
+// for(let c in num) {
+//     console.log(num[c])
+// }

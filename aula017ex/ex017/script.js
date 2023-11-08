@@ -6,11 +6,11 @@ function adicionar() {
         window.alert('Digite um número por favor!')
     } else {
         var num = Number(tnum.value)
-        for(let c in num) {
-            let vet = []
-            vet.push(c)
-            var op = window.document.createElement('option')
-            op.text = `Valor ${c} adicionado`
+        var vet = []
+        for(let c in vet) {
+            vet.push(vet[c])
+            let op = window.document.createElement('option')
+            op.text += `Valor ${vet[c]}`
             res.appendChild(op)
         }
     }
