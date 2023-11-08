@@ -5,13 +5,19 @@ function adicionar() {
     if(tnum.value.length == 0) {
         window.alert('Digite um número por favor!')
     } else {
-        var num = Number(tnum.value)
-        var vet = []
-        for(let c in vet) {
-            vet.push(vet[c])
-            let op = window.document.createElement('option')
-            op.text += `Valor ${vet[c]}`
-            res.appendChild(op)
+        let num = Number(tnum.value)
+        if(num < 1 || num > 100) {
+            window.alert('Valor inválido ou já encontrado na lista.')
+        } else {
+            var vet = []
+            vet.push(num)
+            let c = 0
+            while(c < vet.length) {
+                let op = window.document.createElement('option')
+                op.text += `Valor ${vet[c]} adicionado.`
+                res.appendChild(op)
+                c++
+        }
         }
     }
 }
