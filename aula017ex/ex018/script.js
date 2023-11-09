@@ -1,23 +1,22 @@
-/* validação da caixa*/
+let fnum = window.document.querySelector('input#txtnum')
+let fsel = window.document.querySelector('select#sel')
+let res = window.document.querySelector('section#res')
+let lista = []
+
 function adicionar() {
-    let tnum = window.document.getElementById('txtnum')
-    let res = window.document.getElementById('res')
-    if(tnum.value.length == 0) {
-        window.alert('Digite um número por favor!')
+    let num = Number(fnum.value)
+    if(lista.indexOf(num) !=  -1 || num < 1 || num > 100) {
+        window.alert('Valor inválidor ou já encontrado na lista.')
     } else {
-        let num = Number(tnum.value)
-        if(num < 1 || num > 100) {
-            window.alert('Valor inválido ou já encontrado na lista.')
-        } else {
-            var vet = []
-            vet.push(num)
-            let c = 0
-            while(c < vet.length) {
-                let op = window.document.createElement('option')
-                op.text += `Valor ${vet[c]} adicionado.`
-                res.appendChild(op)
-                c++
-        }
+        lista.push(num)
+        for(let c = 0; c < lista.length; c++) {
+            let op = window.document.createElement('option')
+            op.text = `Valor ${lista[c]} adicionado`
+            fsel.appendChild(op)
         }
     }
+}
+
+function analisar() {
+    res.innerHTML = `Ao todo, temos ${lista.length} números cadastrados`
 }
