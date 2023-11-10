@@ -1,38 +1,46 @@
 let fnum = window.document.querySelector('input#txtnum')
 let fsel = window.document.querySelector('select#sel')
 let res = window.document.querySelector('section#res')
-let dados = []
-let lista = []
-let max = 0
-let min = 0
+let valores = []
 
 function adicionar() {
-    let num = Number(fnum.value)
-    if(lista.indexOf(num) !=  -1 || num < 1 || num > 100) {
+    if(valores.indexOf(Number(fnum.value)) !=  -1 || fnum.value < 1 || fnum.value > 100) {
         window.alert('Valor inválidor ou já encontrado na lista.')
     } else {
-        lista.push(num)
-        for(let c = 0; c < lista.length; c++) {
-            let op = window.document.createElement('option')
-            op.text = `Valor ${lista[c]} adicionado`
-            dados.push(lista)
-            lista.pop()
-            fsel.appendChild(op)
-        }
+        valores.push(Number(fnum.value))
+        let item = window.document.createElement('option')
+        item.text = `Valor ${fnum.value} adicionado`
+        fsel.appendChild(item)
+        res.innerHTML = ''
     }
+    fnum.value = ''
+    fnum.focus()
 }
 
 function analisar() {
-    for(let l in dados) {
-        if(l == 0) {
-            max[l] = l
-            min[l] = l
-        } else if(l > max) {
-            max[l] = l
-        } else if(l < min) {
-            min[l] = l
+    if(valores.length == 0) {
+        window.alert('Adicione valores antes di finalizar!')
+    } else {
+        let tot = valores.length
+        let max = valores[0]
+        let min = valores[0]
+        let soma = 0
+        let media = 0
+        for(let pos in valores) {
+            soma += valores[pos]
+            if(valores[pos] > max) {
+                max = valores[pos]
+            } 
+            if(valores[pos] < min) {
+                min = valores[pos]
+            }
         }
+        media = soma / tot
+        res.innerHTML = ''
+        res.innerHTML += `<p>Ao todo, ${tot} números cadastrador.</p>`
+        res.innerHTML += `<p>O maior valor informado foi ${max}</p>`
+        res.innerHTML += `<p>O menor valor informado foi ${min}</p>`
+        res.innerHTML += `<p>A soma de todos os valures é ${soma}</p>`
+        res.innerHTML += `<p>A média dos valores é ${media}</p>`
     }
-    res.innerHTML = `O maior valor informado foi ${max}`
-    
 }
