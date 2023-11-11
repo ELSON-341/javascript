@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-/* validação da caixa*/
-function adicionar() {
-    let tnum = window.document.getElementById('txtnum')
-    let res = window.document.getElementById('res')
-    if(tnum.value.length == 0) {
-        window.alert('Digite um número por favor!')
-    } else {
-        let num = Number(tnum.value)
-        if(num < 1 || num > 100) {
-            window.alert('Valor inválido ou já encontrado na lista.')
-        } else {
-            var vet = []
-            vet.push(num)
-            let c = 0
-            while(c < vet.length) {
-                let op = window.document.createElement('option')
-                op.text += `Valor ${vet[c]} adicionado.`
-                res.appendChild(op)
-                c++
-        }
-        }
-=======
 let fnum = window.document.querySelector('input#txtnum')
 let fsel = window.document.querySelector('select#sel')
 let res = window.document.querySelector('section#res')
@@ -65,6 +42,5 @@ function analisar() {
         res.innerHTML += `<p>O menor valor informado foi ${min}</p>`
         res.innerHTML += `<p>A soma de todos os valures é ${soma}</p>`
         res.innerHTML += `<p>A média dos valores é ${media}</p>`
->>>>>>> zoro-ex17
     }
 }
