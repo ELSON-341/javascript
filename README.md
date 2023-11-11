@@ -2,3 +2,4 @@
   corso de JavaScript
   * adicionei um ninha
   * comando pull
+  * comando fetch
