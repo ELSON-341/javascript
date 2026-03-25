@@ -8,11 +8,11 @@
 <body>
     <h1>Olá, mundo!</h1>
     <script>
-        window.alert("Olá, tudo bem?");
-        window.confirm("Deseja continuar?");
-       const name = window.prompt("Qual é o seu nome?");
-       window.document.querySelector("h1").innerText = `Olá ${name}, seja bem-vindo!`;
-       window.document.write("O que você deseja fazer, " + name + "?");
+        const name = prompt("Qual é o seu nome?");
+        alert(`Seu nome tem ${name.length} letras.`);
+        alert(`Seu nome em maiúsculas é ${name.toUpperCase()}
+        Seu nome em minúsculas é ${name.toLowerCase()}.`);
     </script>
 </body>
 </html>
+ 
