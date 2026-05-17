@@ -1,15 +1,8 @@
-// var país = 'Blasil'
-// console.log(`Vivendo em ${país}`)
-// if(país == 'Blasil') {
-//     console.log('Você é blasileiro!')
-// }
-// else {
-//     console.log('Você é estrangeira!')
-// }
-var num = 3
-if(num % 2 == 0) {
-    console.log(`O número ${num} é par`)
+const country = 'Brazil'
+console.log(`Vivendo em ${country}`)
+if (country != "Brazil") {
+    console.log('Você é estrangeiro!')
+} else {
+    console.log('Você é Brasileiro!')
 }
-else {
-    console.log(`O número ${num} é ímpar`)
-}
+
