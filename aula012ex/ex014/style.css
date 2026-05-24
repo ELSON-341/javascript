@@ -17,12 +17,12 @@ body {
     background-color: var(--morning);
 }
 
-h1 {
+header > h1 {
     text-align: center;
     margin: 20px 10px;
 }
 
-main {
+section {
     padding: 20px;
     border-radius: 10px;
     width: 700px;
@@ -32,8 +32,9 @@ main {
     text-align: center;
 }
 
-main > h2 {
+section > p {
     margin-top: 10px;
+    font-size: 1.2em;
 }
 
 img#photo {
@@ -41,10 +42,12 @@ img#photo {
     border-radius: 50%;
     width: 350px;
     height: 330px;
+    object-fit: cover;
 }
 
-p {
+footer > p#copyright {
     text-align: center;
     margin-top: 10px;
     font-size: 20px;
+    color: white;
 }
