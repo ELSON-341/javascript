@@ -1,4 +1,5 @@
-const time = 2
+const naw = new Date()
+const time = naw.getHours()
 console.log(`Agora são exatamente ${time} horas.`)
 if (time < 6) {
     console.log('Boa madrogada!')
