@@ -1,11 +1,11 @@
-const now = new Date()
-const time = now.getHours()
+const time = 2
 console.log(`Agora são exatamente ${time} horas.`)
-if ( time > 5 && time < 12) {
-    console.log('Bom dia!')
-} else if (time <= 18) {
+if (time < 6) {
+    console.log('Boa madrogada!')
+} else if (time < 12) {
+    console.log('bom dia!');   
+} else if (time < 18) {
     console.log('Boa tarde!')
-}
- else {
+} else {
     console.log('Boa noite!')
 }
