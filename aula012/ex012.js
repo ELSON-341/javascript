@@ -1,4 +1,5 @@
-const time = 22
+const now = new Date()
+const time = now.getHours()
 console.log(`Agora são exatamente ${time} horas.`)
 if ( time > 5 && time < 12) {
     console.log('Bom dia!')
