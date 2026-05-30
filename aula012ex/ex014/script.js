@@ -8,7 +8,7 @@ function hours() {
     const seconds = now.getSeconds()
 
     // const hour = 17
-    p.innerText = `Agora são ${hour} horas e ${minutes} minutos e ${seconds} segundos`
+    p.innerText = `Agora são ${hour} horas e ${minutes} minutos e ${seconds} seguds`
 
 
     if (hour < 12) {
