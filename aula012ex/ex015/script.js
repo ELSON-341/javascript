@@ -54,3 +54,6 @@ function toCheck() {
 fYaer.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') toCheck()
 })
+
+redSex[0].addEventListener('click', toCheck)
+redSex[1].addEventListener('click', toCheck)
