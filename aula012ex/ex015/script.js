@@ -3,6 +3,7 @@ const yaer = date.getFullYear()
 const fYaer = document.getElementById('txtano')
 const res = document.querySelector('div#res')
 const redSex = window.document.getElementsByName('radsex')
+
 function toCheck() {
     
     const age = yaer - Number.parseInt(fYaer.value)
@@ -46,6 +47,7 @@ function toCheck() {
             img.setAttribute('src', 'mulher-idosa.png')
         }
     }
+
     res.style.textAlign = 'center'
     res.innerHTML = `Detectamos ${gender} com ${age} anos.`
     res.appendChild(img)
