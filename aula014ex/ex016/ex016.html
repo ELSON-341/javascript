@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Modelo de Execício</title>
 </head>
 <body>
@@ -14,25 +15,24 @@
         <div>
             <p>
                 <label for="txt-ini">Início: </label>
-                <input type="number" name="txt-ini" id="txt-ini" mii>
+                <input type="number" name="txt-ini" id="txt-ini" required min="0" max="10" step="0.1">
             </p>
             <p>
                 <label for="txt-fim">Fim: </label>
-                <input type="number" name="txt-fim" id="txt-fim">
+                <input type="number" name="txt-fim" id="txt-fim" required max="10" step="0.1">
             </p>
             <p>
                 <label for="txt-pas">Passo: </label>
-                <input type="number" name="txt-pas" id="txt-pas">
+                <input type="number" name="txt-pas" id="txt-pas" required min="0" max="5">
             </p>
-            <button type="button">Contar</button>
+            <button type="button" onclick="counter()">Contar</button>
         </div>
-        <div>
-            <img src="" alt="">
+        <div id="res">
+
         </div>
     </section>
     <footer>
         <p>&copy; Curso em Vídeo</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html> 
