@@ -1,7 +1,7 @@
 function tabuada() {
     let tnum = window.document.querySelector('input#txtnum')
     let res = window.document.querySelector('select#res')
-    if(tnum.value.length == 0) {
+    if(tnum.value.length == 0) { 
         window.alert('Por favor digite um número!')
     } else {
         res.innerHTML = ""
