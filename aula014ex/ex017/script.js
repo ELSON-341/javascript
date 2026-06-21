@@ -1,18 +1,23 @@
-function tabuada() {
-    let tnum = window.document.querySelector('input#txtnum')
-    let res = window.document.querySelector('select#res')
-    if(tnum.value.length == 0) { 
+
+function generateTable() {
+    const num = window.document.querySelector('#txtnum')
+    const tab = window.document.querySelector('#seltab')
+
+    if (num.value.length == 0) {
         window.alert('Por favor digite um número!')
-    } else {
-        res.innerHTML = ""
-        let num = Number(tnum.value)
-        let c = 1
-        while(c <= 10) {
-            let item = window.document.createElement('option')
-            item.text = `${num} X ${c} = ${num * c.toFixed(2)}`
-            res.value = `${c}`
-            res.appendChild(item)
-            c++
-        }
-        }
+        return
     }
+
+    const n = Number(num.value)
+
+    let c = 1
+    tab.innerHTML = ''
+    while (c <= 10) {
+        const item = window.document.createElement('option')
+        item.text = `${c} X ${n} = ${c*n}`
+        item.value = `tab${c}`
+        tab.appendChild(item)
+        c++
+    }
+    
+}
