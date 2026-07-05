@@ -1,4 +1,5 @@
-let v = function(x){
-    return x*2
+const v = function(n=0) {
+    return n*2
 }
-console.log(v(5))
+
+console.log(v(4))

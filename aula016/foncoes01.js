@@ -1,11 +1,9 @@
-function parimp(n) {
-    if(n % 2 == 0){
-        n = 'par'
-    } else{
-        n = 'ímpar'
+function parImpar(n) {
+    if (n%2 == 0) {
+        return 'Par!'
+    } else {
+        return 'Ímpar'
     }
-    return n
 }
-
-let res = parimp(11=0) 
-console.log(`O número é ${res}.`)
+// const res =  parImpar(4)
+console.log(parImpar(223));
