@@ -25,30 +25,28 @@ function toAnalyze() {
         return
     }
 
-    const total = document.createElement('p')
-    total.innerHTML = `Ao todo, tem ${values.length} números cadastrados.`
-
-    const max = document.createElement('p')
-    max.innerHTML = `O maior valor informado foi ${Math.max(...values)}`
-    
-    const min = document.createElement('p')
-    min.innerHTML = `O menor valor informado foi ${Math.min(...values)}`
-
+    let max = values[0]
+    let min = values[0]
     let sum = 0
     for (let pos in values) {
         sum += values[pos]
+        if (values[pos] > max) {
+            max = values[pos]
+        
+        }
+        
+        if (values[pos] < min) {
+            min = values[pos]
+        }
     }
 
-    const rSum = document.createElement('p')
-    rSum.innerHTML = `A somsndo todos os vares, temos ${sum}`
-    
-    let mean = sum / values.length
-    const rMean = document.createElement('p')
-    rMean.innerHTML = `A média dos vores digitados é ${mean}`
+    const total = values.length
+    const mean = sum / total
 
-    res.appendChild(total)
-    res.appendChild(max)
-    res.appendChild(min)
-    res.appendChild(rSum)
-    res.appendChild(rMean)
+    res.innerHTML += ''
+    res.innerHTML +=  `<p>Ao todo, temos ${total} números cadastrados.</p>`
+    res.innerHTML += `<p>O maior valor informado foi ${max}</p>`
+    res.innerHTML += `<p>O menor valor infomado foi ${min}</p>`
+    res.innerHTML += `<p>Somando todos os valores, temos ${sum}</p>`
+    res.innerHTML += `<p>A média dos valores digitado é ${mean}</p>`
 }
